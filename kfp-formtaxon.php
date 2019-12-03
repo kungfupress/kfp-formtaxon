@@ -9,10 +9,10 @@
  * @link     https://github.com/kungfupress/kfp-formtaxon
  *
  * @wordpress-plugin
- * Plugin Name:  KFP Plugin Name
+ * Plugin Name:  KFP FormTaxon
  * Plugin URI:   https://github.com/kungfupress/kfp-formtaxon
- * Description:  Descripción del plugin.
- * Version:      0.0.2
+ * Description:  .
+ * Version:      0.1.0
  * Author:       Juanan Ruiz
  * Author URI:   https://kungfupress.com/
  * PHP Version:  5.6
@@ -23,12 +23,6 @@ defined( 'ABSPATH' ) || die();
 // Constantes que afectan a todos los ficheros del plugin.
 define( 'KFP_FORMTAXON_DIR', plugin_dir_path( __FILE__ ) );
 define( 'KFP_FORMTAXON_URL', plugin_dir_url( __FILE__ ) );
-define( 'KFP_FORMTAXON_PLUGIN_FILE' );
-$default_headers = array( 'Version' => 'Version' );
-$plugin_data     = get_file_data( __FILE__, $default_headers, 'plugin' );
-define( 'KFP_FORMTAXON_VERSION', $plugin_data['Version'] );
 
-// Activación del plugin.
-require_once KFP_FORMTAXON_DIR . 'include/activate.php';
 // Inicializa el plugin.
 require_once KFP_FORMTAXON_DIR . 'include/plugin-init.php';
