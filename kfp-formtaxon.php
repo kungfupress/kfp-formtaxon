@@ -11,7 +11,7 @@
  * @wordpress-plugin
  * Plugin Name:  KFP FormTaxon
  * Plugin URI:   https://github.com/kungfupress/kfp-formtaxon
- * Description:  .
+ * Description:  Ejemplo de utilización de una categoría personalizada desde un formulario
  * Version:      0.1.0
  * Author:       Juanan Ruiz
  * Author URI:   https://kungfupress.com/
