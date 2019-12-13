@@ -24,6 +24,12 @@ function kfp_ftx_form_taller() {
 		)
 	);
 	ob_start();
+	if ( filter_input( INPUT_GET, 'kfp-ftx-resultado', FILTER_SANITIZE_STRING ) === 'success' ) {
+		echo '<h4>Se ha grabado el taller correctamente</h4>';
+	}
+	if ( filter_input( INPUT_GET, 'kfp-ftx-resultado', FILTER_SANITIZE_STRING ) === 'error' ) {
+		echo '<h4>Se ha producido un error al grabar el taller</h4>';
+	}
 	?>
 	<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
 		<?php wp_nonce_field( 'kfp-ftx-taller', 'kfp-ftx-taller-nonce' ); ?>
