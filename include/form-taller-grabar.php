@@ -19,6 +19,11 @@ add_action( 'admin_post_nopriv_kfp-ftx-taller', 'kfp_ftx_graba_taller' );
  * @return void
  */
 function kfp_ftx_graba_taller() {
+	// Si viene en $_POST aprovecha uno de los campos que crea wp_nonce para volver al form.
+	$url_origen = home_url( '/' );
+	if ( ! empty( $_POST['_wp_http_referer'] ) ) {
+		$url_origen = esc_url_raw( wp_unslash( $_POST['_wp_http_referer'] ) );
+	}
 	// Comprueba campos requeridos y nonce.
 	if ( isset( $_POST['nombre'] )
 	&& isset( $_POST['id_lugar'] )
@@ -37,7 +42,14 @@ function kfp_ftx_graba_taller() {
 			'ping_status' => 'closed'
 		);
 		// Esta variable $post_id contiene el ID del nuevo registro
-		// Nos viene de perlas para grabar los metadatos
+		// Nos viene de perlas para grabar la taxonomía
 		$post_id = wp_insert_post($args);
+		$term_taxonomy_ids = wp_set_object_terms( $post_id, $id_lugar, 'kfp-lugar' );
+		$query_arg = array( 'kfp-ftx-resultado' => 'success' );
+		wp_redirect( esc_url_raw( add_query_arg( $query_arg , $url_origen ) ) );
+		exit();
 	}
+	$query_arg = array( 'kfp-ftx-resultado' => 'error' );
+	wp_redirect( esc_url_raw( add_query_arg( $query_arg , $url_origen ) ) );
+	exit();
 }
