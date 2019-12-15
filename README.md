@@ -1,6 +1,6 @@
 # KFP Form Taxon
 
-Form Taxon es un plugin de ejemplo para que aprendas a utilizar taxonómias 
+Form Taxon es un plugin de ejemplo para aprender a utilizar taxonomías 
 personalizadas en los campos tipo **select** de tus formularios de WordPress.
 
 Tienes el tutorial completo en https://kungfupress.com/usar-taxonomias-desde-el-campo-select-de-un-formulario
@@ -21,4 +21,4 @@ El listado de lugares se alimenta de una taxonomía personalizada que se ha crea
 desde el propio plugin y que podrás administrar desde el escritorio dentro del 
 menú **Taller**
 
-![Captura de pantalla animada del formulario](img/formulario-lugares.gif)
+![Captura de pantalla animada del formulario](assets/img/formulario-lugares.gif)
