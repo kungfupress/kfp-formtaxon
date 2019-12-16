@@ -14,8 +14,8 @@ add_shortcode( 'kfp_ftx_form_taller', 'kfp_ftx_form_taller' );
  * @return string
  */
 function kfp_ftx_form_taller() {
-	// Trae los lugares existentes en la base de datos.
-	// Esta variable contiene un array de objetos de tipo taxonomy.
+	// Trae los lugares existentes en la base de datos a la variable $lugares.
+	// Esta variable recibirá un array de objetos de tipo taxonomy.
 	$lugares = get_terms(
 		'kfp-lugar',
 		array(
