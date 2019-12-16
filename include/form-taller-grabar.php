@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) || die();
 // Agrega los action hooks para grabar el formulario (el primero para usuarios
 // logeados y el otro para el resto)
 // Lo que viene tras admin_post_ y admin_post_nopriv_ tiene que coincidir con
-// el value del campo input con name "action" del formulario enviado.
+// el valor del campo input con nombre "action" del formulario enviado.
 add_action( 'admin_post_kfp-ftx-taller', 'kfp_ftx_graba_taller' );
 add_action( 'admin_post_nopriv_kfp-ftx-taller', 'kfp_ftx_graba_taller' );
 
