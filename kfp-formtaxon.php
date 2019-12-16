@@ -1,14 +1,5 @@
 <?php
 /**
- * Formulario con Taxonomia
- *
- * @category Categoría
- * @package  kfp_ftx
- * @author   Juanan Ruiz <kungfupress@gmail.com>
- * @license  GPLv2 http://www.gnu.org/licenses/gpl-2.0.txt
- * @link     https://github.com/kungfupress/kfp-formtaxon
- *
- * @wordpress-plugin
  * Plugin Name:  KFP FormTaxon
  * Plugin URI:   https://github.com/kungfupress/kfp-formtaxon
  * Description:  Ejemplo de utilización de una categoría personalizada desde un formulario
@@ -16,6 +7,8 @@
  * Author:       Juanan Ruiz
  * Author URI:   https://kungfupress.com/
  * PHP Version:  5.6
+ *
+ * @package  kfp_ftx
  */
 
 defined( 'ABSPATH' ) || die();
